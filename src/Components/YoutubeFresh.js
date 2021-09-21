@@ -1,20 +1,24 @@
-import React from "react";
-import ContentLoader from "react-content-loader";
+import React from "react"
+import ContentLoader from "react-content-loader"
 
-const YoutubeFresh = (props) => (
-  <ContentLoader viewBox="0 0 500 420" height={420} width={600} {...props}>
-    <rect x="16" y="17" rx="0" ry="0" width="900" height="400" />
-    <circle cx="35" cy="248" r="20" />
-    <rect x="69" y="229" rx="2" ry="2" width="275" height="15" />
-    <rect x="69" y="253" rx="2" ry="2" width="140" height="15" />
+const MyLoader = (props) => (
+  <ContentLoader 
+    rtl
+    speed={2}
+    width={700}
+    height={460}
+    viewBox="0 0 400 460"
+    backgroundColor="#cfcfcf"
+    foregroundColor="#eae8e8"
+    {...props}
+  >
+    <circle cx="31" cy="31" r="15" /> 
+    <rect x="58" y="18" rx="2" ry="2" width="240" height="10" /> 
+    <rect x="58" y="34" rx="2" ry="2" width="200" height="10" /> 
+    <rect x="0" y="60" rx="2" ry="2" width="400" height="400" />
+    {/* ---- */}
   </ContentLoader>
-);
+)
 
-YoutubeFresh.metadata = {
-  name: "Costal Oktopus",
-  github: "coktopus", // Github username
-  description: "Youtube fresh",
-  filename: "YoutubeFresh", // filename of your loader
-};
+export default MyLoader
 
-export default YoutubeFresh;
